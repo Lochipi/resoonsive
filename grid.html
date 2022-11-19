@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>A1 - Phone Company || CSS Grid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <style>
+        /* Do not change the following CSS. */
+        
+        html {
+            font-size: 16px;
+        }
+        
+        body {
+            background-color: #f2f0f5;
+        }
+        
+        #content {
+            width: 1165px;
+            margin: auto;
+            font-family: "Open Sans", sans-serif;
+        }
+        /*custom css*/
+        
+        .title {
+            font-size: 3em;
+            color: #45088F;
+        }
+        
+        .menu {
+            width: 100%;
+            height: 50px;
+            background-color: #45088F;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            list-style: none;
+            table-layout: fixed;
+            text-align: center;
+            border-radius: 5px;
+            display: flex;
+        }
+        
+        .menu .menu-item {
+            display: table-cell;
+            width: 20%;
+        }
+        
+        .menu .menu-item a {
+            display: block;
+            color: #fff;
+            font-weight: bold;
+            padding: 7%;
+            text-decoration: none;
+        }
+        
+        .menu .menu-item a:hover {
+            background-color: #D65601;
+        }
+        
+        .border-right {
+            border-right: 1px solid #fff;
+        }
+        
+        .sub-title {
+            color: #D65601;
+            font-size: 2.5em;
+        }
+        
+        .cards {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        
+        .card-left h4 {
+            font-size: 1.7em;
+        }
+        
+        .card-left {
+            width: 570px;
+            height: 300px;
+            background-color: #fff;
+            border: thin solid grey;
+            padding-left: 1%;
+        }
+        
+        .setup-paragraph {
+            margin-bottom: 25px;
+        }
+        
+        .card-left .button-link:link,
+        .card-left .button-link:visited {
+            background-color: #45088F;
+            color: #fff;
+            border: 2px solid green;
+            padding: 8px 15px 8px 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .card-left .button-link:hover,
+        .card-left .button-link:active {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .login-paragraph {
+            margin-top: 25px;
+        }
+        
+        span a {
+            text-decoration: none;
+        }
+        
+        span a:hover {
+            text-decoration: underline;
+        }
+        
+        .card-right {
+            grid-template-columns: auto auto;
+            width: 570px;
+            height: 300px;
+            background-color: #fff;
+            border: thin solid grey;
+            gap: 10px;
+        }
+        
+        .card-right h4 {
+            font-size: 1.7em;
+            padding-left: 15px;
+        }
+        
+        .card-right-content {
+            display: flex;
+        }
+        
+        .list-items {
+            width: 40%;
+            text-align: left;
+            margin-top: -20px;
+        }
+        
+        .images-section {
+            width: 60%;
+        }
+        
+        .images-section p {
+            text-align: center;
+        }
+        
+        .image-apple-icon,
+        .image-google-icon {
+            height: 35px;
+            width: 150px;
+        }
+        
+        .img-store {
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        
+        .getapp {
+            text-align: center;
+        }
+        /* Colors Needed
+
+            #F2F0F5; ... page background, menu text and borders
+            #45088F; ... main title, menu item background, Register "button"
+            #D65601; ... menu item background on hover, Subtitle "Support"
+            gray     ... border around "cards"
+            white    ... background color of "cards", Register link
+            blue     ... Sign in link
+
+            */
+        /* Add your CSS here. */
+    </style>
+</head>
+
+<body>
+    <div id="content">
+
+        <h1 class="title">MyMobile</h1>
+
+        <ul class="menu">
+            <li class="menu-item">
+                <a class="border-right" href="#">Home</a>
+            </li>
+            <li class="menu-item">
+                <a class="border-right" href="#">Plans</a>
+            </li>
+            <li class="menu-item">
+                <a class="border-right" href="#">Phones</a>
+            </li>
+            <li class="menu-item">
+                <a class="border-right" href="#">Coverage</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">Support</a>
+            </li>
+        </ul>
+
+        <h1 class="sub-title">Support</h1>
+
+        <div class="cards">
+            <div class="card-left">
+                <h4>Complete your account profile</h4>
+                <p class="setup-paragraph">Set up your MyMobile account. Getting started is easy</p>
+
+                <a class="button-link" href="#" target="_blank">Register ></a>
+
+                <p class="login-paragraph">Already have an account? <span><a href="#">Log in ></a></span></p>
+            </div>
+
+            <div class="card-right">
+                <h4>Manage your MyMobile account</h4>
+                <div class="card-right-content">
+                    <div class="list-items">
+                        <ul>
+                            <li>Check your balance and usage</li>
+                            <li>Top up your account</li>
+                            <li>Change your plan</li>
+                            <li>Update or add your credit card</li>
+                        </ul>
+                    </div>
+
+                    <div class="images-section">
+                        <div class="img-store">
+                            <img class="image-apple-icon" src="images/apple-store.png">
+                            <img class="image-google-icon" src="images/google-playstore.png">
+                        </div>
+
+                        <p class="getapp">Or text <strong>GetApp</strong> to <strong>6789</strong>to get a link to download the app</p>
+
+                    </div>
+                    <!-- ./images-section -->
+                </div>
+                <!-- ./content -->
+            </div>
+            <!-- ./card-right -->
+        </div>
+        <!-- ./cards -->
+    </div>
+
+</body>
+
+</html>
